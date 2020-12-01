@@ -9,12 +9,14 @@ export interface CreateResourceRequest {
     resourceType: string;
     resource: any;
     id?: string;
+    tenantId: string;
 }
 
 export interface UpdateResourceRequest {
     id: string;
     resourceType: string;
     resource: any;
+    tenantId: string;
     vid?: string; // used in version aware update
 }
 
@@ -22,23 +24,27 @@ export interface PatchResourceRequest {
     id: string;
     resourceType: string;
     resource: any;
+    tenantId: string;
     vid?: string; // used in version aware patch
 }
 
 export interface ReadResourceRequest {
     id: string;
     resourceType: string;
+    tenantId: string;
 }
 
 export interface vReadResourceRequest {
     id: string;
     vid: string;
     resourceType: string;
+    tenantId: string;
 }
 
 export interface DeleteResourceRequest {
     id: string;
     resourceType: string;
+    tenantId: string;
 }
 
 export interface ConditionalDeleteResourceRequest {
