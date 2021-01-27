@@ -10,8 +10,9 @@ export interface TypeSearchRequest extends GlobalSearchRequest {
 }
 
 export interface GlobalSearchRequest {
-    queryParams?: any;
     baseUrl: string; // server's URL
+    queryParams?: any;
+    searchFilters?: SearchFilter[];
 }
 
 export interface SearchResponse {
@@ -37,6 +38,28 @@ export interface SearchResult {
     lastResultUrl?: string;
 }
 
+export interface SearchFilter {
+    key: string;
+    value: string[];
+    comparisonOperator: '==' | '!=' | '>' | '<' | '>=' | '<=';
+    logicalOperator: 'AND' | 'OR';
+}
+
+export interface SearchCapabilityStatement {
+    [resourceType: string]: SearchCapabilities;
+}
+
+export interface SearchCapabilities {
+    searchParam: {
+        name: string;
+        definition?: string;
+        type: string;
+        documentation?: string;
+    }[];
+    searchInclude: string[];
+    searchRevInclude: string[];
+}
+
 export interface Search {
     /**
      * Searches a specific Resource Type based on some filter criteria
@@ -46,4 +69,9 @@ export interface Search {
      * Searches all Resource Types based on some filter criteria
      */
     globalSearch(request: GlobalSearchRequest): Promise<SearchResponse>;
+    /**
+     * Retrieve a subset of the CapabilityStatement with the search-related fields for all resources
+     * See https://www.hl7.org/fhir/capabilitystatement.html
+     */
+    getCapabilities(): Promise<SearchCapabilityStatement>;
 }
