@@ -64,5 +64,5 @@ export interface Bundle {
      * A set of actions to be atomically performed as a "transaction". For example if one operation in the transaction
      * fails this will fail the entire transaction, and roll back any pending changes.
      */
-    transaction(request: TransactionRequest): Promise<BundleResponse>;
+    transaction(request: TransactionRequest, tenantId: string): Promise<BundleResponse>;
 }
