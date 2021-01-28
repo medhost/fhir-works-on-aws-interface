@@ -1,6 +1,30 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [7.0.0](https://github.com/awslabs/fhir-works-on-aws-interface/compare/v6.0.1...v7.0.0) (2021-01-12)
+
+
+### Features
+
+* add getCapabilities method to Search interface ([#42](https://github.com/awslabs/fhir-works-on-aws-interface/issues/42)) ([b274566](https://github.com/awslabs/fhir-works-on-aws-interface/commit/b274566c71899a2bd7c7d9112bfd85c889678ad4))
+
+## [6.0.1] - 2021-01-06
+
+### Updated
+* `GetSearchFilterBasedOnIdentityRequest.operation` now includes `history-instance`
+
+## [6.0.0] - 2020-12-21
+
+### Added
+- `SearchFilter` interface to allow `fhir-works-on-aws-search` to filter search results
+- `GetSearchFilterBasedOnIdentity` interface so `fhir-works-on-aws-authz` can provide `SearchFilter` that can be used for filtering search results
+- `InvalidSearchParameterError`: A new error for search to throw when search parameters are invalid
+
+## [5.0.0] - 2020-12-11
+
+### Added
+- `ProductInfo` interface to collect product and business information about the FHIR server
 
 ## [4.0.0] - 2020-11-20
 
