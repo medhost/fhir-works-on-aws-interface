@@ -12,6 +12,7 @@ export interface BatchRequest {
 export interface TransactionRequest {
     requests: BatchReadWriteRequest[];
     startTime: Date;
+    tenantId: string;
 }
 
 // TODO all required?
