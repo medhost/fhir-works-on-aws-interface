@@ -15,6 +15,7 @@ export interface TypeHistoryRequest extends GlobalHistoryRequest {
 
 export interface GlobalHistoryRequest {
     baseUrl: string; // server's URL
+    tenantId: string;
     queryParams?: any;
     searchFilters?: SearchFilter[];
 }
