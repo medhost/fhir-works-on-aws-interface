@@ -19,6 +19,7 @@ export interface GlobalSearchRequest {
 export interface TypeSearchRequest extends GlobalSearchRequest {
     resourceType: string;
     allowedResourceTypes: string[];
+    tenantId: string;
 }
 
 export interface SearchEntry {

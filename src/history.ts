@@ -7,6 +7,7 @@ import { SearchEntry, SearchFilter } from './search';
 
 export interface GlobalHistoryRequest {
     baseUrl: string; // server's URL
+    tenantId: string;
     queryParams?: any;
     searchFilters?: SearchFilter[];
 }
