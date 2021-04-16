@@ -79,50 +79,6 @@ export type ConfigVersion = 1.0;
  */
 export type FhirVersion = '3.0.1' | '4.0.1';
 
-export type R4Resource =
-    | STU3Resource
-    | 'BiologicallyDerivedProduct'
-    | 'BodyStructure'
-    | 'CatalogEntry'
-    | 'ChargeItemDefinition'
-    | 'CoverageEligibilityRequest'
-    | 'CoverageEligibilityResponse'
-    | 'DeviceDefinition'
-    | 'EffectEvidenceSynthesis'
-    | 'EventDefinition'
-    | 'Evidence'
-    | 'EvidenceVariable'
-    | 'ExampleScenario'
-    | 'ImmunizationEvaluation'
-    | 'InsurancePlan'
-    | 'Invoice'
-    | 'MedicationKnowledge'
-    | 'MedicinalProduct'
-    | 'MedicinalProductAuthorization'
-    | 'MedicinalProductContraindication'
-    | 'MedicinalProductIndication'
-    | 'MedicinalProductIngredient'
-    | 'MedicinalProductOperation'
-    | 'MedicinalProductManufactured'
-    | 'MedicinalProductPackaged'
-    | 'MedicinalProductPharmaceutical'
-    | 'MedicinalProductUndesirableEffect'
-    | 'MolecularSequence'
-    | 'ObservationDefinition'
-    | 'OrganizationAffiliation'
-    | 'ResearchDefinition'
-    | 'ResearchElementDefinition'
-    | 'RiskEvidenceSynthesis'
-    | 'ServiceRequest'
-    | 'SpecimenDefinition'
-    | 'SubstancePolymer'
-    | 'SubstanceProtein'
-    | 'SubstanceReferenceInformation'
-    | 'SubstanceSpecification'
-    | 'SubstanceSourceMaterial'
-    | 'TerminologyCapabilities'
-    | 'VerificationResult';
-
 export type STU3Resource =
     | 'Account'
     | 'ActivityDefinition'
@@ -242,6 +198,51 @@ export type STU3Resource =
     | 'ValueSet'
     | 'VisionPrescription';
 
+export type R4Resource =
+    | STU3Resource
+    | 'BiologicallyDerivedProduct'
+    | 'BodyStructure'
+    | 'CatalogEntry'
+    | 'ChargeItemDefinition'
+    | 'CoverageEligibilityRequest'
+    | 'CoverageEligibilityResponse'
+    | 'DeviceDefinition'
+    | 'EffectEvidenceSynthesis'
+    | 'EventDefinition'
+    | 'Evidence'
+    | 'EvidenceVariable'
+    | 'ExampleScenario'
+    | 'ImmunizationEvaluation'
+    | 'InsurancePlan'
+    | 'Invoice'
+    | 'MedicationKnowledge'
+    | 'MedicinalProduct'
+    | 'MedicinalProductAuthorization'
+    | 'MedicinalProductContraindication'
+    | 'MedicinalProductIndication'
+    | 'MedicinalProductIngredient'
+    | 'MedicinalProductInteraction'
+    | 'MedicinalProductManufactured'
+    | 'MedicinalProductPackaged'
+    | 'MedicinalProductPharmaceutical'
+    | 'MedicinalProductUndesirableEffect'
+    | 'MolecularSequence'
+    | 'ObservationDefinition'
+    | 'OrganizationAffiliation'
+    | 'ResearchDefinition'
+    | 'ResearchElementDefinition'
+    | 'RiskEvidenceSynthesis'
+    | 'ServiceRequest'
+    | 'SpecimenDefinition'
+    | 'SubstanceNucleicAcid'
+    | 'SubstancePolymer'
+    | 'SubstanceProtein'
+    | 'SubstanceReferenceInformation'
+    | 'SubstanceSpecification'
+    | 'SubstanceSourceMaterial'
+    | 'TerminologyCapabilities'
+    | 'VerificationResult';
+
 export const BASE_R4_RESOURCES: R4Resource[] = [
     'Account',
     'ActivityDefinition',
@@ -328,7 +329,7 @@ export const BASE_R4_RESOURCES: R4Resource[] = [
     'MedicinalProductContraindication',
     'MedicinalProductIndication',
     'MedicinalProductIngredient',
-    'MedicinalProductOperation',
+    'MedicinalProductInteraction',
     'MedicinalProductManufactured',
     'MedicinalProductPackaged',
     'MedicinalProductPharmaceutical',
@@ -374,11 +375,12 @@ export const BASE_R4_RESOURCES: R4Resource[] = [
     'StructureMap',
     'Subscription',
     'Substance',
+    'SubstanceNucleicAcid',
     'SubstancePolymer',
     'SubstanceProtein',
     'SubstanceReferenceInformation',
-    'SubstanceSpecification',
     'SubstanceSourceMaterial',
+    'SubstanceSpecification',
     'SupplyDelivery',
     'SupplyRequest',
     'Task',
