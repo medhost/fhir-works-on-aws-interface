@@ -27,6 +27,7 @@ export interface VerifyAccessTokenRequest {
     id?: string;
     vid?: string;
     bulkDataAuth?: BulkDataAuth;
+    tenantId?: string;
 }
 
 export interface AuthorizationBundleRequest {
